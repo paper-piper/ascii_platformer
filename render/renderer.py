@@ -3,17 +3,12 @@ class Renderer:
         self.screen = screen
 
     def render(self, level):
-        """
-        Draw the level map centered on the screen.
-        Assumes a fixed level size of 60x20 characters.
-        """
         max_y, max_x = self.screen.getmaxyx()
-        level_height = 20
-        level_width = 60
-
-        start_y = (max_y - level_height) // 2
-        start_x = (max_x - level_width) // 2
+        offset_y = max((max_y - level.height) // 2, 1)
+        offset_x = max((max_x - level.width) // 2, 1)
 
         for y, line in enumerate(level.map_data):
-            display_line = line.ljust(level_width)
-            self.screen.addstr(start_y + y, start_x, display_line)
+            display_line = line.ljust(level.width)
+            if offset_y + y < max_y - 1:
+                self.screen.addstr(offset_y + y, offset_x, display_line[:level.width])
+        return offset_y, offset_x
