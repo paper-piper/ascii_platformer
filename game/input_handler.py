@@ -1,18 +1,17 @@
-import curses
+import keyboard
 
 
 class InputHandler:
-    def __init__(self, screen):
-        self.screen = screen
 
-    def get_action(self):
-        key = self.screen.getch()
-        if key in (ord('a'), curses.KEY_LEFT):
-            return 'left'
-        if key in (ord('d'), curses.KEY_RIGHT):
-            return 'right'
-        if key in (ord('w'), curses.KEY_UP, ord(' ')):
-            return 'jump'
-        if key in (ord('q'), ord('Q')):
-            return 'quit'
-        return None
+    def get_actions(self) -> set:
+        """Poll real-time key states using the keyboard module."""
+        actions = set()
+        if keyboard.is_pressed('a') or keyboard.is_pressed('left'):
+            actions.add('left')
+        if keyboard.is_pressed('d') or keyboard.is_pressed('right'):
+            actions.add('right')
+        if keyboard.is_pressed('w') or keyboard.is_pressed('space') or keyboard.is_pressed('up'):
+            actions.add('jump')
+        if keyboard.is_pressed('q'):
+            actions.add('quit')
+        return actions

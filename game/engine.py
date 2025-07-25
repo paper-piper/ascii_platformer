@@ -20,49 +20,20 @@ class GameEngine:
 
     def _main(self, stdscr):
         curses.curs_set(0)
-        stdscr.nodelay(True)
-        stdscr.keypad(True)
-        self.input_handler = InputHandler(stdscr)
         renderer = Renderer(stdscr)
+        self.input_handler = InputHandler()
 
         while True:
-            action = self.input_handler.get_action()
-            if action == 'quit':
+            actions = self.input_handler.get_actions()
+            if 'quit' in actions:
                 break
 
-            if action in ('left', 'right'):
-                dx = -1 if action == 'left' else 1
-                new_x = self.player.x + dx
-                if 0 <= new_x < self.level.width and self.level.map_data[self.player.y][new_x] != '#':
-                    self.player.x = new_x
-
-            # initiate jump if on ground
-            if action == 'jump' and self.player.on_ground:
-                self.player.jump_remaining = self.player.max_jump
-                self.player.on_ground = False
-
-            # apply vertical movement: jump arc then gravity
-            if self.player.jump_remaining > 0:
-                # try moving up one cell
-                new_y = self.player.y - 1
-                if new_y >= 0 and self.level.map_data[new_y][self.player.x] not in ('#', '='):
-                    self.player.y = new_y
-                else:
-                    # hit ceiling, cancel remaining jump
-                    self.player.jump_remaining = 0
-                self.player.jump_remaining -= 1
-            else:
-                # gravity: fall unless standing on floor or platform
-                below = self.player.y + 1
-                if below < self.level.height and self.level.map_data[below][self.player.x] not in ('#', '='):
-                    self.player.y = below
-                    self.player.on_ground = False
-                else:
-                    self.player.on_ground = True
+            self.player.update(actions, self.level)
 
             stdscr.clear()
             stdscr.border()
             offset_y, offset_x = renderer.render(self.level)
             stdscr.addch(offset_y + self.player.y, offset_x + self.player.x, self.player.symbol)
             stdscr.refresh()
-            time.sleep(1/30)
+            time.sleep(1 / 30)
+

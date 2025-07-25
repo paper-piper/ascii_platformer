@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="529ada84-255e-4c32-a674-e93f621c9e73" name="Changes" comment="first step working">
-      <change afterPath="$PROJECT_DIR$/entities/player.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/game/input_handler.py" afterDir="false" />
+    <list default="true" id="529ada84-255e-4c32-a674-e93f621c9e73" name="Changes" comment="level four completed, need to improve movement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/levels/level1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/levels/level1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/entities/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render/renderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/render/renderer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/level.py" beforeDir="false" afterPath="$PROJECT_DIR$/world/level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game/input_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/game/input_handler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,35 +25,35 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "paper-piper"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;paper-piper&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/paper-piper/ascii_platformer",
-    "accountId": "49724ca1-87c3-4f57-befc-3d9c0beeab29"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/paper-piper/ascii_platformer&quot;,
+    &quot;accountId&quot;: &quot;49724ca1-87c3-4f57-befc-3d9c0beeab29&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="30Mxpg7rIkjWv1CEsE24BwL7aEd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.__main__.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.__main__.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -81,11 +78,20 @@
       <option name="project" value="LOCAL‎" />
       <updated>1753452826367</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎-00002" summary="level four completed, need to improve movement">
+      <option name="closed" value="true" />
+      <created>1753454542052</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL‎-00002" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1753454542052</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first step working" />
-    <option name="LAST_COMMIT_MESSAGE" value="first step working" />
+    <MESSAGE value="level four completed, need to improve movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="level four completed, need to improve movement" />
   </component>
 </project>
